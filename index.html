@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Algorithmica - DSA Visualizer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="styles.css"
 </head>
 <body>
 <div class="app">
@@ -19,6 +20,9 @@
       <span>press <span class="k">space</span> to play/pause</span>
       <span>press <span class="k">→</span> to step</span>
     </div>
+    <button class="theme-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <i class="fa-solid fa-moon"></i>
+    </button>
   </div>
   <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
   <div class="sidebar" id="sidebar"></div>
@@ -28,7 +32,7 @@
       <div class="complexity-row" id="complexityRow"></div>
     </div>
     <div class="stage-wrap">
-      <div class="stage"><div id="canvasHost"><div class="empty-hint">Pick an algorithm from the left panel to begin</div></div></div>
+      <div class="stage" id="stageEl"><div id="canvasHost"><div class="empty-hint">Pick an algorithm from the left panel to begin</div></div></div>
       <div class="legend" id="legendRow"></div>
       <div class="desc-bar"><span class="step-no" id="stepNo">0 / 0</span><span class="desc-text" id="stepDesc">Waiting for selection…</span></div>
     </div>
@@ -38,6 +42,12 @@
       <button class="btn" id="btnPrev">⏮ Back</button>
       <button class="btn" id="btnReset">↺ Reset</button>
       <div class="speed-wrap">Speed <input type="range" id="speedSlider" min="1" max="10" value="5"></div>
+      <div class="zoom-wrap">
+        <button class="zoom-btn" id="zoomOutBtn" aria-label="Zoom out" title="Zoom out">−</button>
+        <span class="zoom-label" id="zoomLabel">100%</span>
+        <button class="zoom-btn" id="zoomInBtn" aria-label="Zoom in" title="Zoom in">+</button>
+        <button class="zoom-btn" id="zoomResetBtn" aria-label="Reset zoom" title="Reset zoom">⟲</button>
+      </div>
       <div class="spacer"></div>
       <div id="dynamicControls" class="array-input-row"></div>
     </div>
@@ -47,11 +57,11 @@
     </div>
   </div>
   <div class="site-footer">
-    <span style="color:white;">Developer: Md. Anisur Rahman</span>
+    <span>Developer: Md. Anisur Rahman</span>
     <span class="sep">|</span>
     <a href="https://www.grameenphone.academy/public-profile/GP153876" target="_blank" rel="noopener noreferrer">Grameenphone Academy Profile</a>
     <span class="sep">|</span>
-    <a href="https://github.com/AnisurRahmanJU/Algorithmica-DSA" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+    <a href="https://github.com/AnisurRahmanJU" target="_blank" rel="noopener noreferrer">GitHub</a>
   </div>
 </div>
 <script src="script.js"></script>
