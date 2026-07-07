@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Algorithmica — DSA Visualizer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <div class="topbar">
+    <div style="display:flex;align-items:center;">
+      <button class="menu-btn" id="menuToggle" aria-label="Open menu">☰</button>
+      <div class="brand"><span class="dot"></span>Algorithmica<small>DSA VISUALIZER</small></div>
+    </div>
+    <div class="topbar-right">
+      <span>press <span class="k">space</span> to play/pause</span>
+      <span>press <span class="k">→</span> to step</span>
+    </div>
+  </div>
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+  <div class="sidebar" id="sidebar"></div>
+  <div class="main">
+    <div class="main-header">
+      <h1 id="algoTitle">Select an algorithm</h1>
+      <div class="complexity-row" id="complexityRow"></div>
+    </div>
+    <div class="stage-wrap">
+      <div class="stage"><div id="canvasHost"><div class="empty-hint">Pick an algorithm from the left panel to begin</div></div></div>
+      <div class="legend" id="legendRow"></div>
+      <div class="desc-bar"><span class="step-no" id="stepNo">0 / 0</span><span class="desc-text" id="stepDesc">Waiting for selection…</span></div>
+    </div>
+    <div class="controls" id="controlsRow">
+      <button class="btn primary" id="btnPlay">▶ Play</button>
+      <button class="btn" id="btnStep">Step ⏭</button>
+      <button class="btn" id="btnPrev">⏮ Back</button>
+      <button class="btn" id="btnReset">↺ Reset</button>
+      <div class="speed-wrap">Speed <input type="range" id="speedSlider" min="1" max="10" value="5"></div>
+      <div class="spacer"></div>
+      <div id="dynamicControls" class="array-input-row"></div>
+    </div>
+    <div class="code-wrap">
+      <div class="lang-tabs" id="langTabs"></div>
+      <div class="code-area" id="codeArea"></div>
+    </div>
+  </div>
+  <div class="site-footer">
+    <span>Developer: Md. Anisur Rahman</span>
+    <span class="sep">|</span>
+    <a href="https://www.grameenphone.academy/public-profile/GP153876" target="_blank" rel="noopener noreferrer">Grameenphone Academy Profile</a>
+    <span class="sep">|</span>
+    <a href="https://github.com/AnisurRahmanJU" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
